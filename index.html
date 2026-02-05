@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Special Message</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #fce4ec;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Layout Containers */
+        #landing-page,
+        #proposal-card,
+        #appreciation-page {
+            text-align: center;
+        }
+
+        #proposal-card,
+        #appreciation-page {
+            display: none;
+            background: white;
+            padding: 70px;
+            border-radius: 24px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: 700px;
+            margin: 20px;
+        }
+
+        /* Landing Page Text */
+        #landing-page h1 {
+            color: #d81b60;
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        #start-link {
+            color: #f93d60;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            cursor: pointer;
+        }
+
+        /* Card Elements */
+        .teddy-face {
+            width: 250px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        h2,
+        .yay-text {
+            color: #000000;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 20px;
+            min-height: 100px; /* Space for growing button */
+        }
+
+        .btn {
+            padding: 12px 35px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: transform 0.2s, all 0.2s ease;
+        }
+
+        #yes-btn,
+        #final-yes-btn {
+            background-color: #e91e63;
+            color: white;
+            z-index: 10;
+        }
+
+        #no-btn {
+            background-color: #f1f1f1;
+            color: #000000;
+            position: relative;
+            z-index: 1000;
+            white-space: nowrap;
+        }
+
+        .footer-hint {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #000000;
+        }
+
+        /* Letter Styling */
+        #success-message center {
+            color: #000000;
+            line-height: 1.4;
+        }
+
+        .celebration-gif {
+            width: 500%;
+            max-width: 400px;
+            border-radius: 12px;
+            margin-top: 15px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Falling Hearts */
+        .heart {
+            position: fixed;
+            top: -10px;
+            font-size: 14px;
+            animation: fall linear forwards;
+            z-index: 0;
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(0) translateX(0); opacity: 1; }
+            100% { transform: translateY(100vh) translateX(20px); opacity: 0; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="landing-page">
+        <h1>I have a surprise for you...</h1>
+        <a href="#" id="start-link">Click here to open your message ❤️</a>
+    </div>
+
+    <div id="proposal-card">
+        <div id="card-content">
+            <img src="https://images.stockcake.com/public/b/d/5/bd578562-2edb-45da-b31f-3eb69d7ce2f3_large/kawaii-heart-bear-stockcake.jpg"
+                alt="Teddy Face" class="teddy-face">
+            <h1>renuka will you be my valentine?</h1>
+
+            <div class="button-group">
+                <button class="btn" id="yes-btn">Yes</button>
+                <button class="btn" id="no-btn">No</button>
+            </div>
+            <p class="footer-hint" id="main-hint">"You're going to have to try harder than that. 😉"</p>
+        </div>
+
+        <div id="success-message" class="hidden">
+            <h1 class="yay-text">This Message Took Courage 🙇🏻‍♂️</h1>
+            <center>Renuka...I dont know how you would react to this malarkey</center><br>
+            <center>I wanted to express something to you but, I was not sure how you would react 😔</center><br>
+            <center>I feel like I could easily confess to you over chat or a call, but I'd prefer to do it in person</center><br>
+            <center>I was little disturbed when I heard you are shifting</center><br>
+            <center>That's why I call you for meet 🥺 but you left</center><br>
+            <center>But today I finally want to confess through this kiddish stuff that, I see yourself as a perfect match</center><br>
+            <center>I really really like You Renuka more than a friend</center><br>
+            <center>I know it's a dilemma, but I promise you that I will not put you in any setback</center><br>
+            <center>If you’re comfortable, I’d love to start the next chapter with you 🥹</center><br>
+            <center>There's no pressure from my side, take your time if you are confused about your feelings🥹</center><br>
+            <center>Plzzz yes bol yaaar😅 I don't wanna loose you that's why i was not confessing</center>
+            <center>But i dont think i can keep these feelings inside me anymore </center>
+
+            <div class="button-group">
+                <button class="btn" id="final-yes-btn">Yes🤍</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="appreciation-page">
+        <h1 class="yay-text">You just unlocked unlimited happiness😃</h1>
+        <p>My heart is doing a happy dance right now💓</p>
+        <p>Thank you for saying yes</p>
+        <p>I promise to always be by your side</p>
+        <p>Let’s make this journey amazing☺️</p>
+        <img src="https://media1.tenor.com/m/0Sh7u1lRsyEAAAAC/wedding-crasher-hro.gif" class="celebration-gif" alt="Celebration Hug">
+        <p style="margin-top: 20px; font-weight: bold; color: #e91e63;">Waiting for your message in our chat! ✨</p>
+    </div>
+
+    <script>
+        const startLink = document.getElementById('start-link');
+        const landingPage = document.getElementById('landing-page');
+        const proposalCard = document.getElementById('proposal-card');
+        const noBtn = document.getElementById('no-btn');
+        const yesBtn = document.getElementById('yes-btn');
+        const finalYesBtn = document.getElementById('final-yes-btn');
+        const cardContent = document.getElementById('card-content');
+        const successMessage = document.getElementById('success-message');
+        const appreciationPage = document.getElementById('appreciation-page');
+
+        let yesSize = 1;
+        const convincingLines = [
+            "Are you sure? 🥺",
+            "I promise I'll make you smile every day 💕",
+            "Pleeaseeee? 🙇🏻‍♂️",
+            "One chance? I’ll treat you like a queen 👑",
+            "My heart already chose you ❤️",
+            "Okay now the Yes button looks better 😌",
+        ];
+        let lineIndex = 0;
+
+        // Page 1 -> Page 2
+        startLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            landingPage.style.display = 'none';
+            proposalCard.style.display = 'block';
+        });
+
+        // "No" Button Logic
+        const moveButton = () => {
+            // Change Text
+            noBtn.innerText = convincingLines[lineIndex];
+            lineIndex = (lineIndex + 1) % convincingLines.length;
+
+            // Grow Yes Button
+            yesSize += 0.5;
+            yesBtn.style.transform = `scale(${yesSize})`;
+
+            // Move No Button
+            noBtn.style.position = 'fixed';
+            const padding = 50;
+            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth - padding);
+            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight - padding);
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
+        };
+
+        noBtn.addEventListener('mouseover', moveButton);
+        noBtn.addEventListener('touchstart', (e) => { e.preventDefault(); moveButton(); });
+
+        // First Yes -> Show Letter
+        yesBtn.addEventListener('click', () => {
+            cardContent.classList.add('hidden');
+            successMessage.classList.remove('hidden');
+            noBtn.style.display = 'none';
+        });
+
+        // Final Yes -> Show Appreciation Page
+        finalYesBtn.addEventListener('click', () => {
+            proposalCard.style.display = 'none';
+            appreciationPage.style.display = 'block';
+        });
+
+        // Falling hearts
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.classList.add("heart");
+            heart.innerHTML = "❤️";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+            heart.style.fontSize = (Math.random() * 10 + 10) + "px";
+            document.body.appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 6000);
+        }
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
